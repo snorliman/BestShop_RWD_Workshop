@@ -1,4 +1,4 @@
-const entryPath = "BestShop_RWD_Workshop";
+const entryPath = ".";
 
 const gulp = require("gulp");
 const sass = require("gulp-sass");
