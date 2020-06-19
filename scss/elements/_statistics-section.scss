@@ -1,0 +1,97 @@
+.statistics_section {
+  margin-top: 100px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1352px;
+  }
+  .statistics_section_header {
+    font-family: $primary-font;
+    font-size: 36px;
+    color: $black-color;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  .statistics_section_block {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 120px;
+    justify-content: space-between;
+
+    @include mobile {
+      margin: 35px auto 50px;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+
+  .statistics_section_column {
+    flex: 1;
+    display: flex;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: $primary-font;
+
+    @include mobile {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .circle {
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle_img {
+    position: absolute;
+    left: 30px;
+  }
+  .red {
+    background-color: $red-color;
+
+  }
+  .blue {
+    background-color: $blue-color;
+  }
+  .green {
+    background-color: $green-color;
+  }
+
+  .statistics_column_header {
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: $black-color;
+    margin-top: 14px;
+    margin-bottom: 19px;
+  }
+  .statistics_column_text {
+    font-family: $primary-font;
+    font-size: 17px;
+    color: $gray-color;
+    text-align: center;
+    margin-bottom: 149px;
+
+  }
+}
+
