@@ -80,13 +80,15 @@
 
         </article>
         <article class="benefits_article_middle benefits_article">
-            <img class="iphone" src="assets/iPhone.png">
-            <h2 class="benefits_header middle_article_header">Your shop is where you are!</h2>
-            <p class="benefits__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div class="benefits_text">
+                <h2 class="benefits_header middle_article_header">Your shop is where you are!</h2>
+                <p class="benefits__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="benefits_image"><img class="iphone" src="assets/iPhone.png"></div>
         </article>
         <article class="benefits_article_bottom benefits_article">
-            <div class="benefits_single">
+            <div class="benefits_one">
                 <div class="benefits_text">
                     <h2 class="benefits_header bottom_article_header">Increase recognition your brand!</h2>
                     <p class="benefits__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -95,40 +97,48 @@
             </div>
             <div class="benefits_img_bottom benefits_one"><img class="trumpet" src="assets/Trumpet.png"></div>
         </article>
+    </div>
+</section>
 
-        <section class="pricing" id="prices">
-            <h2 class="pricing_header">Pricing</h2>
-            <div class="pricing_section_block">
-                <div class="pricing_basic pricing_column">
+<section class="pricing container" id="prices">
+        <h2 class="pricing_header">Pricing</h2>
+        <div class="pricing_section_block">
+            <div class="pricing_basic pricing_column">
+                <div class="pricing_details">
                     <h3 class="pricing_column_header basic_header">Basic</h3>
                     <strong class="pricing_basic_cost cost">$0</strong>
-                    <ul class="pricing_basic_offer pricing_offer">
-                        <li class="offer_checked">100 MB HDD</li>
-                        <li class="offer_checked">1 Subdomain</li>
-                        <li class="offer_checked">2 E-mails</li>
-                        <li class="offer_not_checked">Two years license</li>
-                        <li class="offer_not_checked">Full support</li>
-                    </ul>
-                    <a class="pricing_begin_btn basic_btn" href="#">Begin</a>
                 </div>
-                <div class="pricing_professional pricing_column">
+                <ul class="pricing_basic_offer pricing_offer">
+                    <li class="offer_checked">100 MB HDD</li>
+                    <li class="offer_checked">1 Subdomain</li>
+                    <li class="offer_checked">2 E-mails</li>
+                    <li class="offer_not_checked">Two years license</li>
+                    <li class="offer_not_checked">Full support</li>
+                </ul>
+                <a class="pricing_begin_btn basic_btn" href="#">Begin</a>
+            </div>
+            <div class="pricing_professional pricing_column">
+                <div class="pricing_details">
                     <h3 class="pricing_column_header professional_header">Professional</h3>
                     <strong class="pricing_professional_cost cost">$25</strong>
                     <span class="limited_offer limited_professional">Limited offer</span>
-                    <ul class="pricing_professional_offer pricing_offer">
-                        <li class="offer_checked">500 MB HDD</li>
-                        <li class="offer_checked">2 Subdomain</li>
-                        <li class="offer_checked">5 E-mails</li>
-                        <li class="offer_checked">One year license</li>
-                        <li class="offer_not_checked">Full support</li>
-                    </ul>
-                    <a class="pricing_begin_btn professional_btn" href="#">Begin</a>
+                </div>
+                <ul class="pricing_professional_offer pricing_offer">
+                    <li class="offer_checked">500 MB HDD</li>
+                    <li class="offer_checked">2 Subdomain</li>
+                    <li class="offer_checked">5 E-mails</li>
+                    <li class="offer_checked">One year license</li>
+                    <li class="offer_not_checked">Full support</li>
+                </ul>
+                <a class="pricing_begin_btn professional_btn" href="#">Begin</a>
 
                 </div>
                 <div class="pricing_premium pricing_column">
-                    <h3 class="pricing_column_header premium_header">Premium</h3>
-                    <strong class="pricing_premium_cost cost">$25</strong>
-                    <span class="limited_offer limited_premium">Limited offer</span>
+                    <div class="pricing_details">
+                        <h3 class="pricing_column_header premium_header">Premium</h3>
+                        <strong class="pricing_premium_cost cost">$25</strong>
+                        <span class="limited_offer limited_premium">Limited offer</span>
+                    </div>
                     <ul class="pricing_premium_offer pricing_offer">
                         <li class="offer_checked" >2 GB HDD</li>
                         <li class="offer_checked">5 Subdomain</li>
@@ -137,12 +147,11 @@
                         <li class="offer_checked">Full support</li>
                     </ul>
                     <a class="pricing_begin_btn premium_btn" href="#">Begin</a>
-
                 </div>
             </div>
-        </section>
-        <section class="contact" id="contact_us">
-            <div class="contact_left_block">
+</section>
+<section class="contact container" id="contact_us">
+            <div class="contact_block">
                 <h2 class="contact_header">Any questions?</h2>
                 <p class="contact_text">Leave your email address or call us!</p>
                 <div class="contact_icon">
@@ -150,7 +159,7 @@
                     <img class="icon" src="assets/Phone%20Icon.svg"><span class="contact_data phone_number">123 456 789</span>
                 </div>
             </div>
-            <div class="contact_right_block">
+            <div class="contact_block">
                 <form class="contact_form">
                     <label for="name">Name</label><input type="text" id="name">
                     <label for="email">Email</label><input type="email" id="email">

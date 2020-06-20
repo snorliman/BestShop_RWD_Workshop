@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include notebook {
+    margin: 50px auto;
+  }
 }
 .pricing_header {
   font-size: 36px;
@@ -13,7 +16,13 @@
 }
 .pricing_section_block {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+
+  @include notebook {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .pricing_column {
   border-radius: 18px;
@@ -21,32 +30,45 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 370px;
+
+  @include notebook {
+    width: 100%;
+    max-width: 370px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+    padding: 25px 10px 0 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .pricing_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .pricing_column_header {
+      font-family: $primary-font;
+      font-weight: 700;
+      font-size: 20px;
+      color: $black-color;
+      padding: 20px;
+    }
+
+    .cost {
+      font-family: $secondary-font;
+      font-weight: 300;
+      font-size: 46px;
+      padding: 10px;
+    }
+  }
 }
-.pricing_column_header {
-  font-family: $primary-font;
-  font-weight: 700;
-  font-size: 20px;
-  color: $black-color;
-  margin-top: 34px;
-  margin-bottom: 14px;
-}
-.basic_header {
-  margin-right: 160px;
-  margin-left: 160px;
-}
-.professional_header {
-  margin-left: 141px;
-  margin-right: 141px;
-}
-.premium_header {
-  margin-right: 143px;
-  margin-left: 143px;
-}
-.cost {
-  font-family: $secondary-font;
-  font-weight: 300;
-  font-size: 46px;
-}
+
 .pricing_basic_cost {
   color: $red-color;
   margin-bottom: 69px;
@@ -78,28 +100,33 @@
   text-align: center;
   margin-bottom: 81px;
 }
-.offer_checked::before {
-  content:"";
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  border-radius: 2px;
-  background-image: url("../assets/Ckechmark-1.svg");
-  background-position: center;
-  background-size: cover;
-  margin-right: 10px;
+.offer_checked {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background-image: url("./assets/Ckechmark-1.svg");
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+    }
+  }
+.offer_not_checked {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background-image: url("./assets/Close.svg");
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+  }
 }
-.offer_not_checked::before {
-  content: "";
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  border-radius: 2px;
-  background-image: url("../assets/Close.svg");
-  background-position: center;
-  background-size: cover;
-  margin-right: 10px;
-}
+
 .pricing_begin_btn {
   font-family: $secondary-font;
   font-weight: 700;
@@ -113,33 +140,37 @@
   left: calc(50% - (150px / 2));
 }
 .pricing_basic {
-  border: 1px solid $red-color;
-  margin-right: 59px;
-  margin-top: 21px;
-  margin-bottom: 197px;
+    border: 1px solid $red-color;
 }
 .pricing_professional {
-  border: 1px solid $blue-color;
-  margin-right: 58px;
-  margin-bottom: 179px;
-  box-shadow: 5px 10px 27px $shadow-box-color;
+    border: 1px solid $blue-color;
+    box-shadow: 5px 10px 27px $shadow-box-color;
+    margin: 0 40px 40px;
+    @include notebook {
+      max-width: 400px;
+    }
 }
 .pricing_premium {
-  border: 1px solid $green-color;
-  margin-top: 21px;
-  margin-bottom:  197px;
+    border: 1px solid $green-color;
 
 }
 .basic_btn {
-  background-color: $red-color;
+    background-color: $red-color;
 }
 .professional_btn {
-  background-color: $blue-color;
+    background-color: $blue-color;
 }
 .premium_btn {
-  background-color: $green-color;
+    background-color: $green-color;
 }
 
 .pricing_offer li {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+.pricing_professional_offer {
+  padding-bottom: 20px;
+  @include notebook {
+    padding-bottom: 0;
+  }
+}
+
