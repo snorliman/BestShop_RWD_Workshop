@@ -18,12 +18,6 @@
       }
     }
   }
-
-
-.contact_right_block {
-  width: 50%;
-
-}
 .contact_header {
   font-family: $primary-font;
   font-size: 3rem;
@@ -79,13 +73,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @include tablet {
+    margin-top: 20px;
+  }
 }
-label:not(.checkbox) {
-  font-family: $secondary-font;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $blue-color;
+label {
+  &:not(.checkbox) {
+    font-family: $secondary-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $blue-color;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.7rem
+  }
 }
 input[type="text"],input[type="email"] {
   width: 100%;
@@ -93,49 +94,59 @@ input[type="text"],input[type="email"] {
   outline-style: none;
   border: none;
   border-bottom: 1px solid $input-border-color;
-}
-input[type="text"]:focus, input[type="email"]:focus {
-  border-bottom: 1px solid $blue-color;
-  background-color: $lightgray;
+
+  &:focus {
+    border-bottom: 1px solid $blue-color;
+    background-color: $lightgray;
+  }
 }
 input[type="text"] {
-  margin-bottom: 42px;
+    margin-bottom: 42px;
 }
 input[type="email"] {
   margin-bottom: 30px;
 }
-.checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.checkbox {
-  cursor: pointer;
-  display: flex;
-  color: $gray-text-color;
-  font-size: 12px;
-  font-family: $secondary-font;
-  min-width: 100%;
-  height: 108px;
-  margin-bottom: 20px;
-  margin-top: 30px;
 
-}
-.checkbox span {
-  height: 24px;
-  flex-basis: 24px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  border: 1px solid $input-border-color;
-  margin-right: 10px;
-}
-.checkbox input:checked + span {
-  background-image: url("./assets/Checkmark.svg");
-  background-size: cover;
-  background-position: center;
-}
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    color: $gray-text-color;
+    font-size: 12px;
+    font-family: $secondary-font;
+    min-width: 100%;
+    height: 108px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    span {
+      height: 24px;
+      flex-basis: 24px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid $input-border-color;
+      margin-right: 10px;
+    }
+    p {
+      margin: 0 10px;
+      font-size: 0.75rem;
+      color: $gray-color;
+      line-height: 17px;
+      margin-top: 20px;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked {
+        + span {
+          background-image: url("./assets/Checkmark.svg");
+          background-size: 50%;
+          background-position: center;
+        }
+      }
+    }
+  }
 button {
   color: $white-color;
   font-family: $secondary-font;
