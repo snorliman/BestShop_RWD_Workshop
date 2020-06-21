@@ -78,7 +78,7 @@
   }
 }
 label {
-  &:not(.checkbox) {
+  &:not(.checkbox, .menu__toggle) {
     font-family: $secondary-font;
     font-weight: bold;
     text-transform: uppercase;

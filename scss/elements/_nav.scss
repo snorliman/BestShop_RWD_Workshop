@@ -16,7 +16,7 @@
     font-weight: 300
   }
 
-  .nav__element {
+  .nav {
     padding: 0 26px;
 
     &:last-child {
@@ -39,6 +39,7 @@
       color: $black-color;
     }
   }
+
   .header_nav {
     display: flex;
     justify-content: space-between;
@@ -57,7 +58,7 @@
         padding: 0;
       }
 
-      .nav__link {
+      .nav_link {
         display: block;
         padding: 14px 20px;
       }
@@ -82,9 +83,11 @@
             &:nth-child(1) {
               transform: rotate(45deg) translate(2px, 5px);
             }
+
             &:nth-child(2) {
               opacity: 0;
             }
+
             &:nth-child(3) {
               transform: rotate(-45deg) translate(2px, -5px);
             }
@@ -93,8 +96,8 @@
       }
     }
   }
-
-  &__toggle {
+}
+.menu__toggle {
     display: none;
 
     span {
@@ -114,4 +117,3 @@
       display: block;
     }
   }
-}
