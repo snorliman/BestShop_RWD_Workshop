@@ -137,9 +137,10 @@ input[type="email"] {
       width: 0;
       &:checked {
         + span {
-          background-image: url("./assets/Checkmark.svg");
+          background-image: url("../../assets/Checkmark.svg");
           background-size: 50%;
           background-position: center;
+          background-repeat: no-repeat;
         }
       }
     }
